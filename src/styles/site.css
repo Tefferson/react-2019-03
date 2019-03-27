@@ -1,0 +1,70 @@
+html,
+body {
+    align-items: center;
+    display: flex;
+    font-family: monospace;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.tic-tac-toe-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #444;
+    cursor: pointer;
+    height: 25px;
+    outline: 0;
+    text-align: center;
+    width: 25px;
+}
+
+.row:nth-child(1)>button:nth-child(1) {
+    border-left: 0;
+    border-top: 0;
+}
+
+.row:nth-child(1)>button:nth-child(2) {
+    border-top: 0;
+}
+
+.row:nth-child(1)>button:nth-child(3) {
+    border-right: 0;
+    border-top: 0;
+}
+
+.row:nth-child(2)>button:nth-child(1) {
+    border-left: 0;
+}
+
+.row:nth-child(2)>button:nth-child(3) {
+    border-right: 0;
+}
+
+.row:nth-child(3)>button:nth-child(1) {
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.row:nth-child(3)>button:nth-child(2) {
+    border-bottom: 0;
+}
+
+.row:nth-child(3)>button:nth-child(3) {
+    border-bottom: 0;
+    border-right: 0;
+}
