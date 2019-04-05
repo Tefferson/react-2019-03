@@ -70,4 +70,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 https://github.com/axios/axios
 https://jsonplaceholder.typicode.com/
 
-Atividade: Criar elemento de paginação. Utilizar como fonte de dados as fotos do endpoint /photos do jsonplaceholder. Exibir a foto e o título. Informar o título na propriedade **title**.
+Atividade: Criar elemento de paginação. Utilizar como fonte de dados as fotos do endpoint /photos do jsonplaceholder. Exibir a foto e o título. Informar o título na propriedade **title**. Exemplo de url com paginação:
+> https://jsonplaceholder.typicode.com/photos?_start=2&_limit=3
