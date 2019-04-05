@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+https://github.com/axios/axios
+https://jsonplaceholder.typicode.com/
+
+Atividade: Criar elemento de paginação. Utilizar como fonte de dados as fotos do endpoint /photos do jsonplaceholder. Exibir a foto e o título. Informar o título na propriedade **title**.
