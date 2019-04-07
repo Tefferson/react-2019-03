@@ -70,5 +70,25 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 https://github.com/axios/axios
 https://jsonplaceholder.typicode.com/
 
-Atividade: Criar elemento de paginação. Utilizar como fonte de dados as fotos do endpoint /photos do jsonplaceholder. Exibir a foto e o título. Informar o título na propriedade **alt**. Exemplo de url com paginação:
+# Atividades
+## Jogo da velha
+Implementar o jogo da velha. Quando houver vitória deve coibir as jogadas dos jogadores. Não é necessário exibir o vencedor. Implementar uma funcionalidade para voltar uma jogada e outra para reiniciar a partida.
+## Listagem
+Utilizar web speech API do javascript para listar as vozes disponíveis através do método _speechSynthesis.getVoices_.
+Os itens da lista devem exibir as propriedades _name_ e _lang_ da voz.
+Também deve ser disponibilizado um botão _play_ em cada item para falar a frase escrita em uma entrada de texto que não faz parte da lista. Após a implementação da da funcionalidade, alterar a exibição da propriedade _lang_: mostrar a bandeira de um país que fale o idioma em questão.
+
+### Referência da web speech API:
+> https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#Speech_synthesis
+
+### Sugestão de biblioteca para as bandeiras:
+>https://github.com/stephenway/react-flagkit
+
+## Paginação
+Criar componente de paginação. Utilizar como fonte de dados as fotos do endpoint "/photos" do jsonplaceholder. Exibir a foto e o título. Informar o título na propriedade **alt** da imagem. 
+
+Após concluir a paginação, criar compoenente para exibir um placeholder/loader enquanto a imagem é carregada.
+O objetivo é instalar uma biblioteca de terceiros e apenas criar um componente para encapsular o componente de terceiros. Para testar o carregamento da imagem é possível simular uma rede mais lenta pela chrome, na aba _network_ o _throttling_ pode ser configurado.
+
+### Exemplo de url com paginação:
 > https://jsonplaceholder.typicode.com/photos?_start=2&_limit=3

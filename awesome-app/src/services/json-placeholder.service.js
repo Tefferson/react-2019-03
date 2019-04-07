@@ -8,6 +8,17 @@ class JsonPlaceholderService {
             .get(`${baseUrl}/posts`)
             .then(({data}) => data)
     }
+
+    static getPhotos(_start, _limit) {
+        return HttpService
+            .get(`${baseUrl}/photos`, {
+            params: {
+                _start,
+                _limit
+            }
+        })
+            .then(({data}) => data)
+    }
 }
 
 export default JsonPlaceholderService
