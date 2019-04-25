@@ -10,18 +10,25 @@ class MainRounter extends React.Component {
             <React.Suspense fallback={<span>Carregando...</span>}>
                 <Router history={history}>
                     <Switch>
-                        <Route exact path="/" component={Modules.HomePage} />
+                        <Route
+                            exact
+                            path="/"
+                            component={Modules.HomePage} />
                         <Route
                             path="/contador"
                             component={Modules.CounterPage}
                         />
                         <Route
-                            path="/contador"
-                            component={Modules.CounterPage}
+                            path="/jogo-da-velha"
+                            component={Modules.TicTacToePage}
                         />
                         <Route
-                            path="/contador"
-                            component={Modules.CounterPage}
+                            path="/fotos"
+                            component={Modules.PhotosPage}
+                        />
+                        <Route
+                            path="/fala"
+                            component={Modules.SpeechPage}
                         />
                         <Redirect to="/" />
                     </Switch>
