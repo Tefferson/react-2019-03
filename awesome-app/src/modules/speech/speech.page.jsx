@@ -1,7 +1,7 @@
 import React from 'react'
-import PhotoPaginationComponent from '../../components/photo-pagination/photo-pagination.component'
+import SpeechComponent from '../../components/speech/speech.component'
 
-class PhotosPage extends React.Component {
+class SpeechPage extends React.Component {
     render() {
         return (
             <div>
@@ -10,10 +10,10 @@ class PhotosPage extends React.Component {
                     type="button"
                     onClick={() => this.props.history.goBack()}
                 />
-                <PhotoPaginationComponent />
+                <SpeechComponent />
             </div>
         )
     }
 }
 
-export default PhotosPage
+export default SpeechPage
