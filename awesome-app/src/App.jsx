@@ -1,16 +1,32 @@
 import React from 'react'
-import styled from 'styled-components'
-import PhotoPaginationComponent from './components/photo-pagination/photo-pagination.component';
+import MainRouter from './router/router'
+import { LayoutContext } from './contexts'
+import { MainLayout } from './layouts'
 
-const App = () => (
-  <StyledContainer>
-    <PhotoPaginationComponent/>
-  </StyledContainer>
-)
+class App extends React.Component {
+	constructor(props) {
+		super(props)
 
-const StyledContainer = styled.div `
-  margin: 0 auto;
-  width: 600px;
-`
+		this.state = {
+			layout: MainLayout
+		}
+
+		this.changeLayout = changeLayout.bind(this)
+	}
+
+	render() {
+		return (
+			<LayoutContext.Provider
+				value={{ layout: this.state.layout, changeLayout: this.changeLayout }}
+			>
+				<MainRouter />
+			</LayoutContext.Provider>
+		)
+	}
+}
+
+function changeLayout(layout) {
+	this.setState({ layout })
+}
 
 export default App
