@@ -1,7 +1,9 @@
 import React from 'react'
+import store from './ducks/store'
 import MainRouter from './router/router'
-import { LayoutContext } from './contexts'
+import { Provider } from 'react-redux'
 import { MainLayout } from './layouts'
+import { LayoutContext } from './contexts'
 
 class App extends React.Component {
 	constructor(props) {
@@ -16,11 +18,13 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<LayoutContext.Provider
-				value={{ layout: this.state.layout, changeLayout: this.changeLayout }}
-			>
-				<MainRouter />
-			</LayoutContext.Provider>
+			<Provider store={store}>
+				<LayoutContext.Provider
+					value={{ layout: this.state.layout, changeLayout: this.changeLayout }}
+				>
+					<MainRouter />
+				</LayoutContext.Provider>
+			</Provider>
 		)
 	}
 }
