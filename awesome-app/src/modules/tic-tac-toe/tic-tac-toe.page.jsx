@@ -1,5 +1,5 @@
 import React from 'react'
-import TicTacToeComponent from '../../components/tic-tac-toe/tic-tac-toe.component'
+import TicTacToeComponent from '../../components/tic-tac-toe/tic-tac-toe.container'
 
 class TicTacToePage extends React.Component {
     render() {
