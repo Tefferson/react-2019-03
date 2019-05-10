@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from '../../components/counter/counter.component'
+import Counter from '../../components/counter/counter.container'
 
 class Conter extends React.Component {
     render() {
