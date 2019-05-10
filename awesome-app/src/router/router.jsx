@@ -30,6 +30,11 @@ class MainRouter extends React.Component {
 									layout={layout}
 									component={Modules.PhotosPage}
 								/>
+								<AppRoute
+									path='/entrar'
+									layout={layout}
+									component={Modules.LoginPage}
+								/>
 								<AppRoute path='/fala' layout={layout} component={Modules.SpeechPage} />
 								<Redirect to='/' />
 							</Switch>
