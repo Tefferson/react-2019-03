@@ -1,7 +1,7 @@
 import AuthenticationService from '../../services/authentication.service'
 
 const initialState = {
-	isSingnedIn: false,
+	isSignedIn: false,
 	isSingningIn: false,
 	user: {
 		id: '',
@@ -39,7 +39,7 @@ export default function reducer(state = initialState, action) {
 		case Types.SET_USER:
 			return {
 				...state,
-				isSingnedIn: true,
+				isSignedIn: true,
 				isSingningIn: false,
 				user: action.payload.user
 			}

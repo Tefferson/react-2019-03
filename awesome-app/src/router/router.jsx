@@ -4,6 +4,7 @@ import * as Modules from '../modules'
 
 import history from './history'
 import AppRoute from './app-route'
+import { connect } from 'react-redux'
 import { LayoutContext } from '../contexts'
 
 class MainRouter extends React.Component {
@@ -15,27 +16,36 @@ class MainRouter extends React.Component {
 						<Router history={history}>
 							<Switch>
 								<AppRoute exact path='/' layout={layout} component={Modules.HomePage} />
-								<AppRoute
-									layout={layout}
-									path='/contador'
-									component={Modules.CounterPage}
-								/>
-								<AppRoute
-									layout={layout}
-									path='/jogo-da-velha'
-									component={Modules.TicTacToePage}
-								/>
-								<AppRoute
-									path='/fotos'
-									layout={layout}
-									component={Modules.PhotosPage}
-								/>
+								{this.props.isSignedIn ? (
+									<React.Fragment>
+										{' '}
+										<AppRoute
+											layout={layout}
+											path='/contador'
+											component={Modules.CounterPage}
+										/>
+										<AppRoute
+											layout={layout}
+											path='/jogo-da-velha'
+											component={Modules.TicTacToePage}
+										/>
+										<AppRoute
+											path='/fotos'
+											layout={layout}
+											component={Modules.PhotosPage}
+										/>
+										<AppRoute
+											path='/fala'
+											layout={layout}
+											component={Modules.SpeechPage}
+										/>
+									</React.Fragment>
+								) : null}
 								<AppRoute
 									path='/entrar'
 									layout={layout}
 									component={Modules.LoginPage}
 								/>
-								<AppRoute path='/fala' layout={layout} component={Modules.SpeechPage} />
 								<Redirect to='/' />
 							</Switch>
 						</Router>
@@ -46,4 +56,8 @@ class MainRouter extends React.Component {
 	}
 }
 
-export default MainRouter
+const mapStateToProps = ({ authentication }) => ({
+	isSignedIn: authentication.isSignedIn
+})
+
+export default connect(mapStateToProps)(MainRouter)

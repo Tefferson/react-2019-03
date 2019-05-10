@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router'
 import { Creators as AuthenticationCreators } from '../../ducks/authentication/authentication'
 
 class LoginPage extends React.Component {
@@ -35,14 +36,16 @@ class LoginPage extends React.Component {
 
 function login() {
 	const { username, password } = this.state
-	this.props.signIn(username, password)
+	this.props.signIn(username, password).then(() => this.props.history.push('/'))
 }
 
 const mapDispatchToProps = {
 	signIn: AuthenticationCreators.signIn
 }
 
-export default connect(
-	null,
-	mapDispatchToProps
-)(LoginPage)
+export default withRouter(
+	connect(
+		null,
+		mapDispatchToProps
+	)(LoginPage)
+)
